@@ -16,8 +16,8 @@ jobs:
   example_matrix:
     strategy:
       matrix:
-        os: [macos-13, macos-13, macos-13]
-        node: [18, 18]
+        os: [ubuntu-latest]
+        node: [18]
         include:
           - os: macos-13 
             node: 16
